@@ -131,7 +131,7 @@ ul {
 .checkbox-costumizado {
     width: 20px;
     height: 20px;
-    background-color: #eee;
+    background-color: var(--neutro);
     border: 1px solid var(--preto);
     cursor: pointer;
     border-radius: 4px;
@@ -159,25 +159,23 @@ ul {
     display: none;
 }
 
-.checked-after {
+.checked-Comprados {
     content: "";
     position: absolute;
     left: 30%;
     top: -1%;
     width: 5px;
     height: 14px;
-    border-top: 2px solid red;
-    border-left: 2px solid red;
+    border-top: 2px solid var(--neutro);
+    border-left: 2px solid var(--neutro);
     transform: rotate(-140deg);
-    display: block;
+    display: none;
 }
 
 .checkbox-input:checked~.checked::after {
 
     display: block;
 }
-
-
 
 .btn_item_lista {
     border: none;
@@ -193,4 +191,8 @@ ul {
 
 .oculto{
     display: none;
+}
+
+.texto-riscado{
+    text-decoration: line-through
 }

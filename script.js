@@ -72,7 +72,7 @@ function adicionarItem(evento) {
             containerListaComprados.appendChild(itensListaComprados);
             //checkbox
             const checkboxContainerComprados = document.createElement("div");
-            checkboxContainerComprados.classList.add("container_lista");
+            checkboxContainerComprados.classList.add("container_item_lista");
             itensListaComprados.appendChild(checkboxContainerComprados);
             //label
             const rotuloCheckboxComprados = document.createElement("label");
@@ -94,7 +94,7 @@ function adicionarItem(evento) {
             rotuloCheckboxComprados.appendChild(checkboxCostumizadoComprados);
             //Delete/edite
             const containerRemoverEditar = document.createElement("div");
-            containerListaComprados.appendChild(containerRemoverEditar);
+            itensListaComprados.appendChild(containerRemoverEditar);
             //botao remover
             const botaoRemover = document.createElement("button");
             containerRemoverEditar.appendChild(botaoRemover);

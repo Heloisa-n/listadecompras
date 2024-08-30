@@ -176,7 +176,9 @@ ul {
 .btn_item_lista {
     border: none;
     background: transparent;
+    cursor: pointer;
 }
+
 
 .item-data-texto {
     font-size: 12px;

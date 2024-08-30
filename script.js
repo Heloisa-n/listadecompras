@@ -118,7 +118,7 @@ function adicionarItem(evento) {
                 containerListaComprados.remove()
 
                 itemDaLista.classList.remove("oculto");
-            containerLista.classList.remove("oculto");
+                containerLista.classList.remove("oculto");
             })
 
             //--------------------------------------------------------------
@@ -164,10 +164,17 @@ function adicionarItem(evento) {
         const imagemEditar = document.createElement("img");
 
         imagemEditar.src = "img/edit.svg";
-        botaoEditar.classList.add("btn_item_lista");
+        botaoEditar.classList.add("btn_item_lista", "btn-Editar");
 
         containerBotoes.appendChild(botaoEditar)
         botaoEditar.appendChild(imagemEditar);
+
+        botaoEditar.addEventListener("click", () => {
+            
+            let editarItem = prompt("Digite o item que deseja adicionar:");
+  
+            nomeDoItem.innerHTML = editarItem;
+        })
         //
 
 

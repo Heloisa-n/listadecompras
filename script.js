@@ -2,22 +2,19 @@
 const item = document.getElementById("input_compras");
 const btnSalvar = document.getElementById("btn_itens");
 const listaDeCompras = document.getElementById("lista-de-compras");//classe da UL 
-const btnDelete = document.querySelector(".remover");
 const listaDeItensComprados = document.getElementById("lista-de-comprados");
 const itensComprados = document.getElementById("itens-comprados")
-
-
-
-
 //funções:
 
 function adicionarItem(evento) {
 
     evento.preventDefault()//ñ deixa a pagina recarregar assim que chama a função, isso acontece por estar dentro de um campo 'form'.
     const itemDaLista = document.createElement("li"); //cria uma li.
+    itemDaLista.id = "itens-da-lista";
     const containerLista = document.createElement("div"); // cria uma div.
     const containerNomeDoItem = document.createElement("div");
     const nomeDoItem = document.createElement("p");
+    nomeDoItem.id ="texto_item"
 
     containerLista.classList.add("container_lista");//adiciona a classe ''container_lista'' a div criada.
 
@@ -38,7 +35,7 @@ function adicionarItem(evento) {
         containerLista.appendChild(itensDaLista);
         //checkbox container
         const containerCheckbox = document.createElement("div");
-        containerCheckbox.classList.add("checkbox-container", "container_lista")
+        containerCheckbox.classList.add("container_item_lista")
         itensDaLista.appendChild(containerCheckbox);
         //label
         const rotuloCheckbox = document.createElement("label");
@@ -75,7 +72,7 @@ function adicionarItem(evento) {
             containerListaComprados.appendChild(itensListaComprados);
             //checkbox
             const checkboxContainerComprados = document.createElement("div");
-            checkboxContainerComprados.classList.add("checkbox-container", "container_lista");
+            checkboxContainerComprados.classList.add("container_lista");
             itensListaComprados.appendChild(checkboxContainerComprados);
             //label
             const rotuloCheckboxComprados = document.createElement("label");
@@ -113,19 +110,20 @@ function adicionarItem(evento) {
             })
             // 
         })
-        //
-
         //--------------------------------------------------------------
 
+        
         //data e hora
+
         const date = new Date;
-        const diaMesAno = (`(${date.getDay()}/${date.getMonth()}/${date.getFullYear()}) ás ${date.getHours()}:${date.getMinutes()}.`)
+        const diaMesAno = (`(${date.getDay()}/${date.getMonth()}/${date.getFullYear()}) ás ${date.getHours()}:${date.getMinutes()}.`);
         const dataEHoraItem = document.createElement("p");
         dataEHoraItem.classList.add("item-data-texto");
-
         dataEHoraItem.innerHTML = diaMesAno;
-
-        listaDeCompras.appendChild(dataEHoraItem);
+        containerLista.appendChild(dataEHoraItem);
+        
+        //container data e hora
+        
         //
 
         //botao de remover item da lista 
@@ -137,6 +135,8 @@ function adicionarItem(evento) {
 
         containerBotoes.appendChild(botaoRemover);
         botaoRemover.appendChild(imagemRemover);
+
+        itensDaLista.appendChild(containerBotoes)
 
         //função de remover item da lista
         botaoRemover.addEventListener("click", () => {
@@ -161,19 +161,10 @@ function adicionarItem(evento) {
     }
 
     itemDaLista.appendChild(containerLista); // coloca a div ''containerLista'' dentro da li criada.
-    containerLista.appendChild(containerBotoes)
+
     listaDeCompras.appendChild(itemDaLista);
 
 }
-
-function adicionarListaDeCompras() {
-    checkboxCostumizado.addEventListener("click", () => {
-        console.log("ok");
-
-    })
-
-}
-
 
 //botões:   
 

@@ -102,12 +102,19 @@ ul {
 
 .container_lista {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.container_item_lista {
+    
+    display: flex;
+
 }
 
 .itens_lista {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
@@ -187,8 +194,11 @@ ul {
     line-height: 20px;
     font-family: var(--fonte-texto);
     font-weight: 400;
-}
 
+}
+.data_hora{
+    display: flex;
+}
 .oculto{
     display: none;
 }

@@ -200,10 +200,12 @@ ul {
 
 @media screen and (max-width: 768px) {
 
-
+    body{
+        height: 100vh;
+    }
     main {
         width: 95%;
-        padding: 1rem 1rem;
+        padding: 2rem 2em;
     }
 
     .input_compras {

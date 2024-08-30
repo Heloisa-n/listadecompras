@@ -107,7 +107,7 @@ ul {
 }
 
 .container_item_lista {
-    
+
     display: flex;
 
 }
@@ -160,8 +160,8 @@ ul {
     top: -1%;
     width: 5px;
     height: 14px;
-    border-top: 2px solid red;
-    border-left: 2px solid red;
+    border-top: 2px solid var(--neutro);
+    border-left: 2px solid var(--neutro);
     transform: rotate(-140deg);
     display: none;
 }
@@ -185,13 +185,43 @@ ul {
     font-weight: 400;
 
 }
-.data_hora{
+
+.data_hora {
     display: flex;
 }
-.oculto{
+
+.oculto {
     display: none;
 }
 
-.texto-riscado{
+.texto-riscado {
     text-decoration: line-through
+}
+
+@media screen and (max-width: 768px) {
+
+
+    main {
+        width: 95%;
+        padding: 1rem 1rem;
+    }
+
+    .input_compras {
+        width: 80vw;
+
+    }
+
+    .btn_itens {
+        width: 60%;
+        font-size: 16px;
+        padding: .5em .5em;
+        
+    }
+
+    .input_compras::placeholder {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+ 
+    }
+
 }

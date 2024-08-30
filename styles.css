@@ -70,7 +70,7 @@ form {
     font-family: var(--fonte-texto);
     border: none;
     border-radius: 5rem;
-    width: 15vw;
+    width: 46%;
     font-size: 18px;
     padding: 1rem 1rem;
     line-height: 24px;
@@ -160,24 +160,13 @@ ul {
     top: -1%;
     width: 5px;
     height: 14px;
-    border-top: 2px solid var(--neutro);
-    border-left: 2px solid var(--neutro);
+    border-top: 2px solid red;
+    border-left: 2px solid red;
     transform: rotate(-140deg);
     display: none;
 }
 
-.checked-Comprados {
-    content: "";
-    position: absolute;
-    left: 30%;
-    top: -1%;
-    width: 5px;
-    height: 14px;
-    border-top: 2px solid var(--neutro);
-    border-left: 2px solid var(--neutro);
-    transform: rotate(-140deg);
-    display: none;
-}
+
 
 .checkbox-input:checked~.checked::after {
 

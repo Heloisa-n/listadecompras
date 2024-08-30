@@ -14,7 +14,7 @@ function adicionarItem(evento) {
     const containerLista = document.createElement("div"); // cria uma div.
     const containerNomeDoItem = document.createElement("div");
     const nomeDoItem = document.createElement("p");
-    nomeDoItem.id ="texto_item"
+    nomeDoItem.id = "texto_item"
 
     containerLista.classList.add("container_lista");//adiciona a classe ''container_lista'' a div criada.
 
@@ -56,10 +56,11 @@ function adicionarItem(evento) {
 
         //---------------mandando para lista de comprados--------------
 
+
         //tirar da lista de compras
         checkboxCostumizado.addEventListener("click", () => {
-
-            itemDaLista.remove();
+            itemDaLista.classList.add("oculto");
+            containerLista.classList.add("oculto");
             dataEHoraItem.remove();
             //Container pai
             const containerListaComprados = document.createElement("div");
@@ -88,6 +89,7 @@ function adicionarItem(evento) {
             inputDoCheckboxComprados.checked = true;
             inputDoCheckboxComprados.id = "checkbox-1";
             rotuloCheckboxComprados.appendChild(inputDoCheckboxComprados);
+
             //checkbox costumizado
             const checkboxCostumizadoComprados = document.createElement("div");
             checkboxCostumizadoComprados.classList.add("checkbox-costumizado", "checked");
@@ -108,11 +110,23 @@ function adicionarItem(evento) {
                 itensListaComprados.remove();
                 containerRemoverEditar.remove();
             })
-            // 
-        })
-        //--------------------------------------------------------------
 
-        
+            checkboxCostumizadoComprados.addEventListener("click", () => {
+                containerCheckbox.appendChild(nomeDoItem);
+                nomeDoItem.classList.remove("texto-riscado")
+                containerLista.appendChild(dataEHoraItem);
+                containerListaComprados.remove()
+
+                itemDaLista.classList.remove("oculto");
+            containerLista.classList.remove("oculto");
+            })
+
+            //--------------------------------------------------------------
+
+
+        })
+
+
         //data e hora
 
         const date = new Date;
@@ -121,9 +135,9 @@ function adicionarItem(evento) {
         dataEHoraItem.classList.add("item-data-texto");
         dataEHoraItem.innerHTML = diaMesAno;
         containerLista.appendChild(dataEHoraItem);
-        
+
         //container data e hora
-        
+
         //
 
         //botao de remover item da lista 
@@ -158,6 +172,7 @@ function adicionarItem(evento) {
 
 
         item.value = ""
+
     }
 
     itemDaLista.appendChild(containerLista); // coloca a div ''containerLista'' dentro da li criada.

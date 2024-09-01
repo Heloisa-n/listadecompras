@@ -28,7 +28,6 @@ function adicionarItem(evento) {
         alert('Escreva algo')
 
     } else {
-
         //checkbox
         const itensDaLista = document.createElement("div");
         itensDaLista.classList.add("itens_lista");
@@ -170,9 +169,9 @@ function adicionarItem(evento) {
         botaoEditar.appendChild(imagemEditar);
 
         botaoEditar.addEventListener("click", () => {
-            
+
             let editarItem = prompt("Digite o item que deseja adicionar:");
-  
+
             nomeDoItem.innerHTML = editarItem;
         })
         //
@@ -186,9 +185,23 @@ function adicionarItem(evento) {
 
     listaDeCompras.appendChild(itemDaLista);
 
+
+
 }
 
 //botões:   
 
 btnSalvar.addEventListener("click", adicionarItem);
 
+//scroll
+
+const altura = listaDeCompras.style.height = "190px";
+const alturaComprados = listaDeItensComprados.style.height = "190px";
+
+if (listaDeCompras.style.height == altura) {
+    listaDeCompras.classList.add("scroll");
+}
+
+if(listaDeItensComprados.style.height == alturaComprados){
+    listaDeItensComprados.classList.add("scroll");
+}

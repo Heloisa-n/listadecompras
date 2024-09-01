@@ -33,8 +33,9 @@ main {
     align-items: center;
     background: var(--neutro);
     border-radius: .5rem;
-    padding: 4rem 4rem;
-    gap: 24px;
+    padding: 1rem 2.5rem;
+    gap: 20px;
+    height: 90%;
 }
 
 form {
@@ -44,6 +45,11 @@ form {
     flex-direction: column;
     gap: 8px;
 
+}
+.titulos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .input_compras {
@@ -97,7 +103,12 @@ hr {
 ul {
     list-style-type: none;
     width: 100%;
-
+    
+}
+.scroll{
+    height: 90%;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .container_lista {
@@ -117,8 +128,6 @@ ul {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-
-
 }
 
 .itens_lista p {
@@ -202,9 +211,10 @@ ul {
 
 @media screen and (max-width: 768px) {
 
-    body{
+    body {
         height: 100vh;
     }
+
     main {
         width: 95%;
         padding: 2rem 2em;
@@ -219,13 +229,13 @@ ul {
         width: 60%;
         font-size: 16px;
         padding: .5em .5em;
-        
+
     }
 
     .input_compras::placeholder {
         font-family: "Montserrat", sans-serif;
         font-size: 16px;
- 
+
     }
 
 }

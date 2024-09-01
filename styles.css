@@ -211,6 +211,11 @@ ul {
 
 @media screen and (max-width: 768px) {
 
+    input, select {
+        font-size: 16px;
+        touch-action: none;
+      }
+
     body {
         height: 100vh;
     }

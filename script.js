@@ -129,7 +129,8 @@ function adicionarItem(evento) {
         //data e hora
 
         const date = new Date;
-        const diaMesAno = (`(${date.getDay()}/${date.getMonth()}/${date.getFullYear()}) ás ${date.getHours()}:${date.getMinutes()}.`);
+        // const diaMesAno = (`(${date.getDay()}/${date.getMonth()}/${date.getFullYear()}) ás ${date.getHours()}:${date.getMinutes()}.`);
+        const diaMesAno = (`${new Date().toLocaleDateString("pt-BR",{weekday:"long"})} (${new Date().toLocaleDateString()}) ás ${new Date().toLocaleTimeString("pt-BR", {hour: "numeric", minute:"numeric"})}.`);
         const dataEHoraItem = document.createElement("p");
         dataEHoraItem.classList.add("item-data-texto");
         dataEHoraItem.innerHTML = diaMesAno;
